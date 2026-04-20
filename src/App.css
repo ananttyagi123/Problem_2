@@ -1,0 +1,114 @@
+/* Specific app styles */
+.section-title {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+}
+
+.data-stream-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.03);
+  margin-bottom: 0.5rem;
+  border: 1px solid transparent;
+  transition: all 0.2s;
+}
+
+.data-stream-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--border-light);
+}
+
+.data-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.data-content h4 {
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+  color: var(--text-primary);
+}
+
+.data-content p {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.1rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--success);
+}
+
+.status-badge.pending {
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--warning);
+}
+
+.velocity-score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: linear-gradient(180deg, rgba(56, 189, 248, 0.1) 0%, rgba(30, 41, 59, 0.5) 100%);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--accent-glow);
+  position: relative;
+  overflow: hidden;
+}
+
+.velocity-score::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(from 0deg, transparent 0 340deg, var(--accent) 360deg);
+  animation: rotate 4s linear infinite;
+  opacity: 0.1;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.score-value {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #fff, #38bdf8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.2;
+}
+
+.score-label {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-secondary);
+  margin-top: 0.5rem;
+}
